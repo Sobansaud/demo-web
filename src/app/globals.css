@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0a8678;
+  --primary-gradient: linear-gradient(90deg, #0a8678 0%, #10b3a1 100%);
+  --secondary: #e57373;
+  --secondary-gradient: linear-gradient(90deg, #e57373 0%, #ef9a9a 100%);
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+body {
+  direction: rtl;
+  font-family: "Amiri", serif;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.pattern-bg {
+  background-color: #000;
+  background-image: linear-gradient(135deg, rgba(0, 128, 128, 0.2) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(0, 128, 128, 0.2) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(0, 128, 128, 0.2) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(0, 128, 128, 0.2) 25%, transparent 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+.navbar {
+  background-color: var(--primary);
+  font-family: "Noto Naskh Arabic", serif;
+  font-weight: 500;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar a {
+  font-weight: 500;
+}
+
+.hero-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.hero-dot.active {
+  opacity: 1;
+  background-color: #10b3a1;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.primary-card {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.white-card {
+  background: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.prayer-times {
+  background: var(--secondary-gradient);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mosque-silhouette {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+}
+
+.read-more {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.question-item {
+  border-bottom: 1px solid rgba(10, 134, 120, 0.1);
+  padding: 1rem 0;
+}
+
+.question-item:last-child {
+  border-bottom: none;
+}
